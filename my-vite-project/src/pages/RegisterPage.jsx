@@ -26,12 +26,13 @@ async function registeruser(ev) {
        // Include confirmPassword
     };
 
-    const response = await axios.post('http://localhost:4000/register', userData, {
+    const response = await axios.post('http://localhost:2000/register', userData, {
       headers: {
         'Content-Type': 'application/json',
       },
     });
-
+    
+    alert("Registration Sucess")
     console.log('Registration successful:', response.data);
     // Handle success
   } catch (error) {
